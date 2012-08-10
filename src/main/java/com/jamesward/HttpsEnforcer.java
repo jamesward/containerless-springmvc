@@ -21,21 +21,12 @@ public class HttpsEnforcer implements Filter {
 
         HttpServletRequest request = (HttpServletRequest) servletRequest;
         HttpServletResponse response = (HttpServletResponse) servletResponse;
-        
-        System.out.println("doFilter");
 
         if (request.getHeader(X_FORWARDED_PROTO) != null) {
-
             if (request.getHeader(X_FORWARDED_PROTO).indexOf("https") != 0) {
-
-                System.out.println("getServletPath: " + request.getServletPath());
-                System.out.println("getQueryString: " + request.getQueryString());
-                System.out.println("getPathInfo: " + request.getPathInfo());
-
                 response.sendRedirect("https://" + request.getServerName() + request.getPathInfo());
                 return;
             }
-
         }
 
         filterChain.doFilter(request, response);
