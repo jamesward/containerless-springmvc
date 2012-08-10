@@ -30,8 +30,9 @@ public class HttpsEnforcer implements Filter {
 
                 System.out.println("getServletPath: " + request.getServletPath());
                 System.out.println("getQueryString: " + request.getQueryString());
+                System.out.println("getPathInfo: " + request.getPathInfo());
 
-                response.sendRedirect("https://" + request.getServerName() + request.getQueryString());
+                response.sendRedirect("https://" + request.getServerName() + request.getPathInfo());
                 return;
             }
 
