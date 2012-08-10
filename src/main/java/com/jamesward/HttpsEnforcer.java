@@ -28,11 +28,11 @@ public class HttpsEnforcer implements Filter {
 
             if (request.getHeader(X_FORWARDED_PROTO).indexOf("https") != 0) {
 
-                System.out.println("getRequestURI: " + request.getRequestURI());
-                System.out.println("getRemoteHost: " + request.getRemoteHost());
-                System.out.println("getServerName: " + request.getServerName());
+                System.out.println("getServletPath: " + request.getServletPath());
+                System.out.println("getQueryString: " + request.getQueryString());
 
-                response.sendRedirect("https://" + request.getRequestURI());
+                response.sendRedirect("https://" + request.getServerName() + request.getQueryString());
+                return;
             }
 
         }
