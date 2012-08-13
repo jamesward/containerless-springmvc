@@ -1,9 +1,10 @@
 Containerless Spring MVC
-------------------------
+========================
 
 Run Spring MVC in a self-contained / containerless application.
 
-### Run Locally
+Run Locally
+-----------
 
 Build with Maven:
 
@@ -18,7 +19,8 @@ Open:
 > [http://localhost:8080](http://localhost:8080)
 
 
-### Run on Heroku
+Run on Heroku
+-------------
 
 Create an app:
 
