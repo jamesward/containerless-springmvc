@@ -6,9 +6,6 @@ import org.eclipse.jetty.servlet.ServletHolder;
 import org.springframework.web.context.support.AnnotationConfigWebApplicationContext;
 import org.springframework.web.servlet.DispatcherServlet;
 
-import javax.servlet.DispatcherType;
-import java.util.EnumSet;
-
 
 public class Webapp {
 
@@ -21,7 +18,6 @@ public class Webapp {
         final ServletContextHandler context = new ServletContextHandler();
         context.setContextPath("/");
         context.addServlet(servletHolder, "/*");
-        context.addFilter(HttpsEnforcer.class, "/*", EnumSet.of(DispatcherType.REQUEST));
 
         String webPort = System.getenv("PORT");
         if (webPort == null || webPort.isEmpty()) {
