@@ -6,13 +6,9 @@ Run Spring MVC in a self-contained / containerless application.
 Run Locally
 -----------
 
-Build with Maven:
-
-    mvn package
-
 Run:
 
-    java -cp target/classes:target/dependency/* com.jamesward.Webapp
+    ./gradlew run
 
 Open:
 

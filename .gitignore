@@ -1,7 +1,9 @@
-/target
+/build
 /.classpath
 /.project
 /.settings
-/tomcat.*
 /.idea
 /*.iml
+/*.ipr
+/*.iws
+/.gradle
