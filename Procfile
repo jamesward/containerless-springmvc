@@ -1,1 +1,1 @@
-web: java $JAVA_OPTS -cp target/classes:target/dependency/* com.jamesward.Webapp
+web: ./build/install/webapp/bin/webapp
